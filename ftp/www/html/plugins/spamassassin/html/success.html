@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title>SpamAssassin Configurator - Success</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <link href="style.css" type="text/css" rel="stylesheet">
+ </head>
+ <body>
+  <form method="POST" action="config.php">
+   <table width="400px" id="outerContainer" align="center">
+    <tr>
+     <td id="userName">
+      Logged in as <?= $_SESSION['username'] ?>
+      <input type="submit" name="action" value="Logout" class="formButtonSmall">
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <table width="400px" id="formContainer" align="center" cellpadding="5">
+       <tr>
+        <td>
+         <img src="images/TitleSuccess.gif">
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <table id="innerForm" width="100%">
+          <tr>
+           <td class="success"><?= $msg ?></td>
+          </tr>
+         </table>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <p>
+         <div align="center">
+          <input type="hidden" name="mode" value="<?= $_SESSION['edit_mode'] ?>">
+          <input class="formButton" type="submit" value="Back">
+         </div>
+        </td>
+       </tr>
+      </table>
+     </td>
+    </tr>
+   </table>
+  </form>
+ </body>
+</html>

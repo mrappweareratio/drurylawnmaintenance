@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>SpamAssassin Configuration</title>
+    <link href="style.css" type="text/css" rel="stylesheet" />
+  </head>
+  <body>
+    <form method="post" action="config.php?mode=local">
+      <div id="container">
+        <div id="pageHeader">
+          <table style="width:100%" class="fixed" cellspacing="0" cellpadding="0">
+            <tr>
+              <td style="width:30%">
+                <img src="images/spamassassin.gif" alt="SpamAssassin" />
+              </td>
+	      <td>
+	       <img src="images/configuration.gif" alt="SpamAssassin Configuration" />
+	      </td>
+	      <td style="width:30%">
+	      </td>
+	     </tr>
+	    </table>
+	   </div> <!-- pageHeader -->
+	   <div id="pageBody">
+	    <table cellspacing="0" cellpadding="0" style="margin:1% auto 1% auto" class="center">
+	     <tr>
+	      <td style="width: 20%">Username *:</td>
+	      <td style="width: 10%">&nbsp;</td>
+	      <td class="right"><input name="username" type="text" id="username" /></td>
+	     </tr>
+	     <tr>
+	      <td>Password *:</td>
+	      <td>&nbsp;</td>
+	      <td class="right"><input name="password" type="password" id="password" /></td>
+	     </tr>
+	     <tr>
+	      <td colspan="3">
+	       * Enter the username and password you use to login to Site Manager
+	      </td>
+	     </tr>
+	    </table>
+	   </div> <!-- pageBody -->
+	   <div id="pageNav">
+	    <input class="formButton" type="submit" value="Submit" /><br />
+	    <span class="error">&nbsp;<?= $error_msg ?></span>
+	   </div> <!-- pageNav -->
+	  </div> <!-- container -->
+	 </form>
+	</body>
+       </html>

@@ -1,0 +1,57 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Lawn care, chipping, spring clean up, fall clean up, mulching, weeding, mowing, snow removal" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>Drury Lawn Maintenance - 502-245-0853</title>
+<!-- TemplateEndEditable -->
+
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<link href="../css.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+body {
+	background-image: url(../images/wallpaper.jpg);
+}
+-->
+</style></head>
+
+<body>
+<div id="container">
+  <div id="banner">
+    <div id="calltoaction">
+      <p><span class="white">Call 502-245-0853</span><br />
+      We can give you a quote over the phone - no problem!</p>
+</div><!--end calltoaction-->
+  
+    <div id="navigation"><a href="../index.html">&nbsp;&nbsp;&nbsp;HOME&nbsp;&nbsp;&nbsp;</a> |   &nbsp;&nbsp;&nbsp;<a href="../services.html">SERVICES</a>&nbsp;&nbsp;&nbsp; |   &nbsp;&nbsp;&nbsp;<a href="../contact.html">CONTACT US</a></div><!--end navigation-->
+  </div><!--end banner-->
+  <div id="body_area"><!-- TemplateBeginEditable name="EditRegion3" -->
+    <p align="center" class="tagline">~ Beautiful grounds require expert care, call Drury Lawn Maintenance ~</p>
+    <p>&nbsp;</p>
+    <table width="772" border="0" align="center" cellpadding="0">
+      <tr>
+        <td width="525"><img src="../images/lawn.jpg" alt="Lawn Maintenance" border="0" /></td>
+        <td width="241" valign="top"><p class="sidebar">We are residential and commercial          lawn care experts serving the entire East End  of Louisville.</p>
+          <p class="sidebar">We strive for excellence. </p></td>
+      </tr>
+      <tr>
+        <td colspan="2"><p>&nbsp;</p>
+          <p class="bottombar">Drury Lawn Maintenance offering lawn and yard maintenance in Louisville’s east end <br />
+            residential and commercial properties for 35 years. </p>
+          <p>&nbsp;</p></td>
+      </tr>
+    </table>
+    <p><br />
+    </p>
+  <!-- TemplateEndEditable --></div>
+  <!--end body area-->
+  <div id="footer">
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&copy; 2015 Drury Lawn Maintenance | Website by <a href="http://www.lalcomputers.com" title="LAL Computers" target="_blank">LAL Computers</a>  </p>
+  </div>
+</div><!--end container-->
+</body>
+</html>

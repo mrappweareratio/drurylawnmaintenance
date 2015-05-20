@@ -1,0 +1,50 @@
+a:link, a:visited {
+  color: rgb(12, 45, 130);
+  text-decoration: none;
+}
+body { font: 12px Verdana, Arial, Geneva, Helvetica, sans-serif }
+h3 { font-size: 10pt; }
+select { width: 150px; }
+table.fixed { table-layout: fixed; }
+textarea {
+  width: 250px;
+  height: 100px;
+  overflow: scroll;
+}
+#pageHeader, #pageBody, #pageNav { margin: 5px; }
+#pageBody img { cursor: pointer }
+#pageHeader { height: 80px; } 
+#pageNav {
+  text-align: center;
+  height: 50px;
+}
+#gradientBar {
+  height: 20px;
+  background-image: url(images/gradient.gif);
+  background-repeat: repeat-x;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding-left: 5px;
+  font-weight: bold;
+  font-size: 11px;
+}
+#gradientBar img { vertical-align: middle; }
+#container {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  width: 700px;
+  border: black solid 1px;
+}
+.formButton {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 12px;
+    border-top-style: groove;
+    background-color: rgb(57, 81, 123);
+}
+.bold { font-weight: bold; }
+.error {
+  color: red;
+  font-weight: bold;
+}

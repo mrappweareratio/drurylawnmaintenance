@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <link href="../style.css" type="text/css" rel="stylesheet" />
+    <title>Report Safe</title>
+  </head>
+  <body>
+    <div style="text-align: center;">
+      <img src="../images/safe.gif" alt="Report Safe" />
+    </div>
+    <p>
+    <span class="bold">Report Safe</span> allows you to modify the way you
+    receive e-mail messages that SpamAssassin marks as spam.  There are 3
+    different options for <span class="bold">Report Safe</span>.
+    </p>
+    <p>
+    <span class="bold">0</span> - By setting
+    <span class="bold">Report Safe</span> to <span class="bold">0</span>, the
+    message body of the spam message is kept intact, and a detailed list of the
+    offending spam rules is included in the e-mail header.
+    </p>
+    <p>
+    <span class="bold">1</span> - By setting 
+    <span class="bold">Report Safe</span> to <span class="bold">1</span>, the
+    message body is replaced by 2 attachments,  The first attachment is a spam
+    report, detailing the e-mail messages spam rule offenses, and the second
+    attachment is the original message body (with content-type
+    message/rfc8222).
+    </p>
+    <p>
+    <span class="bold">2</span> - By setting 
+    <span class="bold">Report Safe</span> to <span class="bold">2</span>, the
+    message body is replaced by 2 attachments.  The first attachment is a spam
+    report detailing the e-mail messages spam rule offenses, and the second
+    attachment is the original message body (with content-type text/plain).
+    </p>
+  </body>
+</html>

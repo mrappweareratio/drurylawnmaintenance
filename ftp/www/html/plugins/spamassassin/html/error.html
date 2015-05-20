@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>SpamAssassin Configuration</title>
+    <link href="style.css" type="text/css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="container">
+      <div id="pageHeader">
+        <table style="width:100%" class="fixed" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="width:30%">
+              <img src="images/spamassassin.gif" alt="SpamAssassin" />
+            </td>
+            <td>
+	     <img src="images/configuration.gif" alt="SpamAssassin Configuration" />
+            </td>
+            <td style="width:30%;text-align:right;vertical-align:top">
+              Logged in as <?= $_SESSION['username'] ?><br />
+              <a href="config.php?action=Logout">Logout</a>
+            </td>
+          </tr>
+        </table>
+      </div> <!-- pageHeader -->
+      <div id="pageBody">
+        <table cellspacing="0" cellpadding="0" style="margin:1% auto 1% auto" class="center">
+          <tr>
+            <td class="error">
+              Error: <?= $msg ?>
+            </td>
+          </tr>
+        </table>
+      </div> <!-- pageBody -->
+      <div id="pageNav">
+        <input class="formButton" type="button" value="Back"
+        onclick="history.go(-1);" /><br />
+      </div> <!-- pageNav -->
+    </div> <!-- container -->
+  </form>
+</body>
+</html>

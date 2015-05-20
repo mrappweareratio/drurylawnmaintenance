@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>SpamAssassin Configuration</title>
+    <link href="style.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="javascript/script.js"></script>
+  </head>
+  <body onload="enableAutoLearn();">
+    <form method="post" action="config.php">
+      <input type="hidden" name="mode" value="<?= $userMode ?>" />
+      <div id="container">
+        <div id="pageHeader">
+          <table style="width:100%" class="fixed" cellspacing="0" cellpadding="0">
+            <tr>
+              <td style="width:30%">
+                <img src="images/spamassassin.gif" alt="SpamAssassin" />
+              </td>
+              <td>
+	       <img src="images/configuration.gif" alt="SpamAssassin Configuration" />
+              </td>
+              <td style="width:30%;text-align:right;vertical-align:top">
+                Logged in as <?= $_SESSION['username'] ?><br />
+                <a href="config.php?action=Logout">Logout</a>
+              </td>
+            </tr>
+          </table>
+        </div> <!-- pageHeader -->
+        <div id="gradientBar">
+          <span style="margin-right: 20px;">
+            <?= $localImg ?>
+            <?= $localHTML ?>
+          </span>
+          <span>
+            <?= $globalImg ?>
+            <?= $globalHTML ?>
+          </span>
+        </div> <!-- gradientBar -->
+        <div id="pageBody">
+          <p style="height:30px"><?= $modeMessage ?></p>
+          <table style="width:100%">
+            <tr>
+              <td class="bold"><?= $userString ?></td>
+              <td><?= $userSelectBox ?></td>
+            </tr>
+            <tr>
+              <td class="bold">
+                Required Hits
+                <img src="images/question.gif" alt="question"
+                onclick="new PopUp('html/required_hits.html').show();" />
+              </td>
+              <td>
+                <select name="requiredHits">
+                  <?= implode("\n", $hitsOptions) ?>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td class="bold">
+                Subject Tag
+                <img src="images/question.gif" alt="question" 
+                onclick="new PopUp('html/subject_tag.html').show();" />
+              </td>
+              <td><input name="subjectTag" type="text" value="<?= $subjectTag ?>" /></td>
+            </tr>
+            <tr>
+              <td class="bold">
+                Report Safe
+                <img src="images/question.gif" alt="question"
+                onclick="new PopUp('html/report_safe.html').show();" />
+              </td>
+              <td>
+                <select name="reportSafe">
+                  <?= implode("\n", $safeOptions) ?>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td class="bold">
+                Use Bayes
+                <img src="images/question.gif" alt="question"
+                onclick="new PopUp('html/use_bayes.html').show();" />
+              </td>
+              <td>
+                <input type="radio" id="yesBayes" name="useBayes" value="1" <?= $bayesYes ?>
+                onclick="enableAutoLearn();" />
+                <label for="yesBayes">yes</label>
+                <input type="radio" id="noBayes" name="useBayes" value="0" <?= $bayesNo ?>
+                onclick="enableAutoLearn();" />
+                <label for="noBayes">no</label>
+              </td>
+            </tr>
+            <tr>
+              <td class="bold">
+                Auto Learn
+                <img src="images/question.gif" alt="question"
+                onclick="new PopUp('html/auto_learn.html').show();" />
+                <br />
+                <span style="font-size:8pt;font-weight:normal">*In order to use Auto Learn, Use Bayes must be on.</span>
+              </td>
+              <td>
+                <input type="radio" id="yesLearn" name="useLearn" value="1" <?= $learnYes ?> />
+                <label for="yesLearn">yes</label>
+                <input type="radio" id="noLearn" name="useLearn" value="0" <?= $learnNo ?> />
+                <label for="noLearn">no</label>
+              </td>
+            </tr>
+            <? if($show_imap && ($userMode == "local")): ?>
+            <tr>
+              <td class="bold">
+                <input type="checkbox" name="filter_spam" value="checked" <?=$filter_spam?>/> Deliver messages marked as 'spam' to your <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IMAP mail folder named:
+              </td>
+              <td>
+                  <input type="text" name="imap_spam_folder" value="<?=$imap_spam_folder?>"/>
+	      </td>
+            </tr>
+            <? endif ?>
+            <tr>
+              <td class="bold">
+                Blacklist
+                <img src="images/question.gif" alt="question" 
+                onclick="new PopUp('html/blacklist.html').show();" />
+              </td>
+              <td>
+                <textarea name="blacklist"><?= $blacklistText ?></textarea>
+              </td>
+            </tr>
+            <tr>
+              <td class="bold">
+                Whitelist
+                <img src="images/question.gif" alt="question"
+                onclick="new PopUp('html/whitelist.html').show();" />
+              </td>
+              <td>
+                <textarea name="whitelist"><?= $whitelistText ?></textarea>
+              </td>
+            </tr>
+          </table>
+        </div> <!-- pageBody -->
+        <div id="pageNav">
+          <input class="formButton" type="submit" name="action" value="Submit" />
+          <input class="formButton" type="submit" name="action" value="Restore Defaults" />
+        </div> <!-- pageNav -->
+      </div> <!-- container -->
+    </form>
+  </body>
+</html>
